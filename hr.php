@@ -189,8 +189,8 @@
                       <p class="lead text-muted"><?php echo $row['goals'] ?></p>
 
                       <p>
-                        <a href="paccept.php?id=<?php echo $row['email'] ?>" value="email" class="btn btn-primary my-2">Accept</a>
-                        <a href="preject.php?id=<?php echo $row['email'] ?>" value="email" class="btn btn-secondary my-2">Reject</a>
+                        <a href="haccept.php?id=<?php echo $row['email'] ?>" value="email" class="btn btn-primary my-2">Accept</a>
+                        <a href="hreject.php?id=<?php echo $row['email'] ?>" value="email" class="btn btn-secondary my-2">Reject</a>
                       </p>
                     <small><i><?php echo $row['date'] ?></i></small>
             <?php
