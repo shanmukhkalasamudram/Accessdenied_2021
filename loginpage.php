@@ -133,7 +133,7 @@
               <option value="employee">Employee</option>
               <option value="projecthead">Project Head</option>
               <option value="hr">HR</option>
-              <option value="ceo">CEO</option>
+              
             </select>
               <label for="inputPassword" class="sr-only">Phone Number</label>
               <input name="phone" type="number" id="phone" class="form-control" placeholder="Phone " required>
