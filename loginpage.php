@@ -1,5 +1,3 @@
-
-  
 <?php
     session_start(); 
     include("functions.php");
@@ -35,31 +33,32 @@
             $password = $_POST['password'];
             $email = $_POST['email'];
             $_SESSION['email'] = $_POST['email'];
-            $a = "client";
-            $b = "sponsor";
-            $c = "accept";
+            $a = "employee";
+            $b = "projecthead";
+            $c = "hr";
+            $d = "ceo";
             $query = "SELECT * from `account`;";
             if(count(fetchAll($query)) > 0){ //this is to catch unknown error.
                     foreach(fetchAll($query) as $row){
                     if($row['email']==$email&&$row['password']==$password){
                         $_SESSION['login'] = true;
 
-                        if($row['role']==$c ){
+                        if($row['role']==$a ){
                             $_SESSION['type'] = $row['type'];
-                            header('location:home.php');
-                        }
-                        elseif($row['role']==$a){
-                            $_SESSION['type'] = $row['type'];
-                            
-
-
-
-                            header('location:clientdash.php');
+                            header('location:employee.php');
                         }
                         elseif($row['role']==$b){
                             $_SESSION['type'] = $row['type'];
-                            header('location:sponsordash.php');
+                                header('location:projecthead.php');
                         }
+                        elseif($row['role']==$c){
+                            $_SESSION['type'] = $row['type'];
+                            header('location:hr.php');
+                        }
+                        elseif($row['role']==$d){
+                          $_SESSION['type'] = $row['type'];
+                          header('location:ceo.php');
+                      }
                         
                     }else{
                         echo "<script>alert('Wrong login details.')</script>";
@@ -131,8 +130,10 @@
               <label for="inputPassword" class="sr-only">Password</label>
               <input name="password" type="password" id="inputPassword" class="form-control" placeholder="Password" required>
               <select name="role" id="role">
-              <option value="client">Client</option>
-              <option value="sponsor">Sponsor</option>
+              <option value="employee">Employee</option>
+              <option value="projecthead">Project Head</option>
+              <option value="hr">HR</option>
+              <option value="ceo">CEO</option>
             </select>
               <label for="inputPassword" class="sr-only">Phone Number</label>
               <input name="phone" type="number" id="phone" class="form-control" placeholder="Phone " required>
@@ -204,4 +205,3 @@
 
   
 </html>
-
