@@ -5,7 +5,7 @@
     
     $id = "0";
 
-    $query = "select * from `enterceo` where `requests`.`id` = '$id'; ";
+    $query = "select * from `enterhr` where `requests`.`id` = '$id'; ";
 
     if(count(fetchAll($query)) > 0){
         foreach(fetchAll($query) as $row){
