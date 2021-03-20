@@ -212,7 +212,7 @@
 	    <a href="#">Home</a>
 		<a href="share.php"> Send Message </a>
 		<a href="share.php"> Received Messages </a>
-		<a href="admindash.php">Pending Requests  </a>
+		<a href="ceoapproval.php">Pending Requests  </a>
 		<a href="index.html" id="log">Logout</a>
 	   
 	  </div>
