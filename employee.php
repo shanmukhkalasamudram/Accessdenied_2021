@@ -120,7 +120,7 @@ include("functions.php");
             if(isset($_POST['enter'])){
 
                 $email = $_SESSION['email'];
-                $startupname = $_POST['projectname'];
+                $projectname = $_POST['projectname'];
                 $abstract = $_POST['abstract'];
                 $share = $_POST['share'];
                 $amount = $_POST['amount'];
@@ -130,7 +130,7 @@ include("functions.php");
 
                         
                                
-                $query = "INSERT INTO `enter` ( `email`, `startupname`, `abstract`, `share`, `amount`, `goals`) VALUES (  '$email', '$startupname', '$abstract', '$share', '$amount', '$goals' )";
+                $query = "INSERT INTO `enter` ( `email`, `projectname`, `abstract`, `share`, `amount`, `goals`) VALUES (  '$email', '$projectname', '$abstract', '$share', '$amount', '$goals' )";
                 if(performQuery($query)){
                     echo "<script>alert('Your Request is successfully registered ,  Thank you.')</script>";
                 }else{
@@ -158,7 +158,7 @@ include("functions.php");
 		  <div class="card">
 			<div class="container row">
 				<div class="input-field col s6">
-					<input id="last_name" type="text" class="validate" name="startupname">
+					<input id="last_name" type="text" class="validate" name="projectname">
 					<label for="last_name">Project Title </label>
 				  </div>
 				  <div class="input-field col s12">
