@@ -192,7 +192,7 @@
                         <a href="caccept.php?id=<?php echo $row['email'] ?>" value="email" class="btn btn-primary my-2">Accept</a>
                         <a href="creject.php?id=<?php echo $row['email'] ?>" value="email" class="btn btn-secondary my-2">Reject</a>
                       </p>
-                    <small><i><?php echo $row['date'] ?></i></small>
+                    
             <?php
                     }
                 }else{

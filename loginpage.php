@@ -77,7 +77,7 @@
                 $role = $_POST['role'];
             
                 
-                $query = "INSERT INTO `requests` ( `firstname`, `lastname`, `email`, `password`, `phone`, `role`,`date`,`id`) VALUES (  '$firstname', '$lastname', '$email', '$password', '$phone', '$role', CURRENT_TIMESTAMP, '0')";
+                $query = "INSERT INTO `requests` ( `email`, `firstname`, `lastname`, `password`, `phone`, `role`,`id`) VALUES ( '$email', '$firstname', '$lastname', '$password', '$phone', '$role', '0')";
                 if(performQuery($query)){
                     echo "<script>alert('We received your request, we will get back to you within 48 Hours ,  Thank you.')</script>";
                 }else{

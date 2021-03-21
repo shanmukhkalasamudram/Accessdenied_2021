@@ -7,49 +7,39 @@
 ?>
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
-
-    <link rel="stylesheet" type="text/css" href="css/index.css">
-    
+	<head>
+<title>HR DashBoard</title>
+		<!-- Compiled and minified CSS -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<!-- Compiled and minified JavaScript -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+   
+		<link rel="stylesheet" type="text/css" href="assets/css/index.css">
 
     <title>Welcome</title>
     <style>
-   
-      body {
-        font-family: "Arial", Serif;
-        background: url("https://imagekit.io/static/img/newPages/homepage-wave-bg.svg");
-        background-size: cover;
-        background-repeat: no-repeat;
-        font-family: "Oxanium";
+   body{background: url(assets/img/hero-bg.png) top center no-repeat;
+         background-size: cover;
+        font-family: "Nunito", sans-serif;
         overflow-x: hidden;
-      }
+				}
 
-      
-        
+				.jumbotron {
+    padding: 2rem 1rem;
+    margin-bottom: 40px;
+	margin-left:60px;
+	margin-right:60px;
+    background-color: #f6f9ff;
+    border-radius: .3rem;
+	box-shadow: 0px 5px 30px rgba(65, 84, 241, 0.4);
+}
+.btn-primary {
+    color: #fff;
+    background-color: #f1418a;
+    border-color: #f1418a;
+}
 
-      #main {
-        transition: margin-left 0.5s;
-        padding: 20px;
-        overflow: hidden;
-        width: 100%;
-      }
-
-      @media (max-width: 568px) {
-        .navbar-nav {
-          display: none;
-        }
-      }
-
-      @media (min-width: 568px) {
-      }
-
-
-      
 				.navbar a{
 				  float:left;
 				  display:block;
@@ -61,7 +51,7 @@
 				}
 
 				.navbar a:hover{
-				  background-color:#ddd;
+				  background-color:rgba(127, 137, 161, 0.25);
 				  color:#000;
 				}
 
@@ -72,8 +62,8 @@
 				  z-index:1;
 				  top:0;
 				  left:0;
-				  background-color:#111;
-				  opacity:0.9;
+				  background-color:#fff;
+				  
 				  overflow-x:hidden;
 				  padding-top:60px;
 				  transition:0.5s;
@@ -83,13 +73,13 @@
 				  padding:10px 10px 10px 30px;
 				  text-decoration:none;
 				  font-size:22px;
-				  color:#ccc;
+				  color:#111;
 				  display:block;
 				  transition:0.3s;
 				}
 
 				.side-nav a:hover{
-				  color:#fff;
+				  color: #f1418a;
 				}
 
 				.side-nav .btn-close{
@@ -100,45 +90,54 @@
 				  margin-left:50px;
 				}
 
-				
+				#main{
+				  transition:margin-left 0.5s;
+				  padding:20px;
+				  overflow:hidden;
+				  width:100%;
+				}
 
 				@media(max-width:568px){
 				  .navbar-nav{display:none}
 				}
 
 				@media(min-width:568px){
+				  /*.open-slide{display:none}*/
 				}
-
-				.column {
-				  float: left;
-				  width: 50%;
-				  height: 22%;
-				  border-radius: 5px;
-				}
-
-				
 				.card {
-				  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-				  padding: 2px 16px;
-				  text-align: center;
-				  background-color: #414656;
+				  box-shadow: 0px 5px 30px rgba(65, 84, 241, 0.4);
+				  transition: 0.3s;
+				  width: 95%;
 				  border-radius: 5px;
-				  margin: 30px;
-				}
-				.card:hover{
-					box-shadow: 0 8px 16px 0 #008DFF;
-
-				}
-				h4 , p{
-					color: white;
-				}
-				#ptag{
-					float: right;
-				}
-				#pleft{
-					float: left;
+				  justify-content: center;
+				  margin-bottom: 20px;
 				}
 
+				.card:hover {
+				  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+				}
+
+				.container {
+				  padding: 2px 16px;
+				}
+				button{
+					margin-top: 30px;
+  line-height: 0;
+  padding: 20px 40px;
+  border-radius: 4px;
+  transition: 0.5s;
+  border: none;
+  color: #fff;
+  background: #f1418a;
+  box-shadow: 0px 5px 30px rgba(65, 84, 241, 0.4);
+  margin-left: 5px;
+  font-size: 18px;
+  transition: 0.3s;
+  font-family: "Nunito", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  letter-spacing: 1px;
+				}
 
       
     </style>
@@ -146,9 +145,10 @@
 
   <body>
 
-  <nav class="navbar">
+  <nav class="navbar transparent">
 	    <span class="open-slide">
 	      <a href="#" onclick="openSlideMenu()">
+		  
 	        <svg width="30" height="30">
 	            <path d="M0,5 30,5" stroke="#111" stroke-width="5"/>
 	            <path d="M0,14 30,14" stroke="#111" stroke-width="5"/>
@@ -163,7 +163,7 @@
     
 
     <header class="main-header">
-      <h1><span> Your </span> Dashboard</h1>
+      <h5><span> HR </span> Dashboard</h5>
     </header>
 
         
@@ -192,7 +192,7 @@
                         <a href="haccept.php?id=<?php echo $row['email'] ?>" value="email" class="btn btn-primary my-2">Accept</a>
                         <a href="hreject.php?id=<?php echo $row['email'] ?>" value="email" class="btn btn-secondary my-2">Reject</a>
                       </p>
-                    <small><i><?php echo $row['date'] ?></i></small>
+                   
             <?php
                     }
                 }else{

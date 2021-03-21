@@ -5,7 +5,7 @@
     
     $id = "0";
 
-    $query = "select * from `enterceo` where `requests`.`id` = '$id'; ";
+    $query = "select * from `enterceo` where `enterceo`.`id` = '$id'; ";
 
     if(count(fetchAll($query)) > 0){
         foreach(fetchAll($query) as $row){
@@ -13,15 +13,15 @@
             $email = $row['email'];
             $projectname = $row['projectname'];
             $abstract = $row['abstract'];
-            $share = $_row['share'];
-                $amount = $_row['amount'];
-                $goals = $_row['goals'];
+            $share = $row['share'];
+                $amount = $row['amount'];
+                $goals = $row['goals'];
 
-                $query = "INSERT INTO `final` ( `email`, `projectname`, `abstract`, `share`, `amount`, `goals`) VALUES (  '$email', '$projectname', '$abstract', '$share', '$amount', '$goals' )";
+                $query = "INSERT INTO `final` ( `email`, `projectname`, `abstract`, `share`, `amount`, `goals`,`id`) VALUES (  '$email', '$projectname', '$abstract', '$share', '$amount', '$goals','0' )";
 
             
         }
-        $query .= "DELETE FROM `enterceo` WHERE `enterceo`.`email` = '$email';";
+        
         if(performQuery($query)){
             echo "Account has been accepted.";
         }else{
@@ -33,4 +33,4 @@
     
 ?>
 <br/><br/>
-<a href="home.php">Back to DashBoard</a>
+<a href="ceo.php">Back to DashBoard</a>

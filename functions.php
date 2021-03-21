@@ -1,7 +1,7 @@
 <?php
 
     
-    define('DBINFO','mysql:host=localhost;dbname=iii');
+    define('DBINFO','mysql:host=localhost;dbname=multilevel');
     define('DBUSER','root');
     define('DBPASS','');
 

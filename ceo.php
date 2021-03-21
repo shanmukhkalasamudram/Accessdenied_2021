@@ -8,31 +8,55 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>PerCapita</title>
+  <meta content="" name="description">
+
+  <meta content="" name="keywords">
+
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
 
-    <link rel="stylesheet" type="text/css" href="css/index.css">
-    
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/css/index.css" rel="stylesheet">
 
-    <title>Welcome</title>
     <style>
    
-      body {
-        font-family: "Arial", Serif;
-        background: url("https://imagekit.io/static/img/newPages/homepage-wave-bg.svg");
-        background-size: cover;
-        background-repeat: no-repeat;
-        font-family: "Oxanium";
-        overflow-x: hidden;
-      }
+   :root {
+  scroll-behavior: smooth;
+}
 
+body{background: url(assets/img/hero-bg.png) top center no-repeat;
+         background-size: cover;
+        font-family: "Nunito", sans-serif;
+        overflow-x: hidden;
+				}
+
+				.jumbotron {
+    padding: 2rem 1rem;
+    margin-bottom: 40px;
+	margin-left:60px;
+	margin-right:60px;
+    background-color: #f6f9ff;
+    border-radius: .3rem;
+	box-shadow: 0px 5px 30px rgba(65, 84, 241, 0.4);
+}
+.btn-primary {
+    color: #fff;
+    background-color: #f1418a;
+    border-color: #f1418a;
+}
       
         
-
-      #main {
+#main {
         transition: margin-left 0.5s;
         padding: 20px;
         overflow: hidden;
@@ -49,8 +73,7 @@
       }
 
 
-      
-				.navbar a{
+      .navbar a{
 				  float:left;
 				  display:block;
 				  color:#f2f2f2;
@@ -61,7 +84,7 @@
 				}
 
 				.navbar a:hover{
-				  background-color:#ddd;
+				  background-color:rgba(127, 137, 161, 0.25);
 				  color:#000;
 				}
 
@@ -72,8 +95,8 @@
 				  z-index:1;
 				  top:0;
 				  left:0;
-				  background-color:#111;
-				  opacity:0.9;
+				  background-color:#fff;
+				  
 				  overflow-x:hidden;
 				  padding-top:60px;
 				  transition:0.5s;
@@ -83,13 +106,13 @@
 				  padding:10px 10px 10px 30px;
 				  text-decoration:none;
 				  font-size:22px;
-				  color:#ccc;
+				  color:#111;
 				  display:block;
 				  transition:0.3s;
 				}
 
 				.side-nav a:hover{
-				  color:#fff;
+				  color: #f1418a;
 				}
 
 				.side-nav .btn-close{
@@ -99,6 +122,7 @@
 				  font-size:36px;
 				  margin-left:50px;
 				}
+
 
 				
 
@@ -111,7 +135,7 @@
 
 				.column {
 				  float: left;
-				  width: 50%;
+				  width: 30%;
 				  height: 22%;
 				  border-radius: 5px;
 				}
@@ -119,7 +143,7 @@
 				
 				.card {
 				  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-				  padding: 2px 16px;
+				  padding: 2px 30px;
 				  text-align: center;
 				  background-color: #414656;
 				  border-radius: 5px;
@@ -190,7 +214,7 @@
                         <a href="accept.php?id=<?php echo $row['email'] ?>" value="email" class="btn btn-primary my-2">Accept</a>
                         <a href="reject.php?id=<?php echo $row['email'] ?>" value="email" class="btn btn-secondary my-2">Reject</a>
                       </p>
-                    <small><i><?php echo $row['date'] ?></i></small>
+                    
             <?php
                     }
                 }else{
@@ -228,6 +252,16 @@
 	      document.getElementById('main').style.marginLeft = '0';
 	    }
   </script>
+ <script src="assets/vendor/bootstrap/js/bootstrap.bundle.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/purecounter/purecounter.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
 
 
     

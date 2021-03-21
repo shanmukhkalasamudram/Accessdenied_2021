@@ -14,23 +14,34 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
 
-    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/index.css">
     
 
     <title>Welcome</title>
     <style>
    
       body {
-        font-family: "Arial", Serif;
-        background: url("https://imagekit.io/static/img/newPages/homepage-wave-bg.svg");
-        background-size: cover;
-        background-repeat: no-repeat;
-        font-family: "Oxanium";
+        
+		background: url(assets/img/hero-bg.png) top center no-repeat;
+         background-size: cover;
+        font-family: "Nunito", sans-serif;
         overflow-x: hidden;
       }
 
-      
-        
+      .jumbotron {
+    padding: 2rem 1rem;
+    margin-bottom: 40px;
+	margin-left:60px;
+	margin-right:60px;
+    background-color: #f6f9ff;
+    border-radius: .3rem;
+	box-shadow: 0px 5px 30px rgba(65, 84, 241, 0.4);
+}
+.btn-primary {
+    color: #fff;
+    background-color: #f1418a;
+    border-color: #f1418a;
+}
 
       #main {
         transition: margin-left 0.5s;
@@ -49,8 +60,7 @@
       }
 
 
-      
-				.navbar a{
+      .navbar a{
 				  float:left;
 				  display:block;
 				  color:#f2f2f2;
@@ -61,7 +71,7 @@
 				}
 
 				.navbar a:hover{
-				  background-color:#ddd;
+				  background-color:rgba(127, 137, 161, 0.25);
 				  color:#000;
 				}
 
@@ -72,8 +82,8 @@
 				  z-index:1;
 				  top:0;
 				  left:0;
-				  background-color:#111;
-				  opacity:0.9;
+				  background-color:#fff;
+				  
 				  overflow-x:hidden;
 				  padding-top:60px;
 				  transition:0.5s;
@@ -83,13 +93,13 @@
 				  padding:10px 10px 10px 30px;
 				  text-decoration:none;
 				  font-size:22px;
-				  color:#ccc;
+				  color:#111;
 				  display:block;
 				  transition:0.3s;
 				}
 
 				.side-nav a:hover{
-				  color:#fff;
+				  color: #f1418a;
 				}
 
 				.side-nav .btn-close{
@@ -99,6 +109,7 @@
 				  font-size:36px;
 				  margin-left:50px;
 				}
+
 
 				
 
@@ -192,7 +203,7 @@
                         <a href="paccept.php?id=<?php echo $row['email'] ?>" value="email" class="btn btn-primary my-2">Accept</a>
                         <a href="preject.php?id=<?php echo $row['email'] ?>" value="email" class="btn btn-secondary my-2">Reject</a>
                       </p>
-                    <small><i><?php echo $row['date'] ?></i></small>
+                    
             <?php
                     }
                 }else{
@@ -202,6 +213,7 @@
             
           
         </div>
+		
           
       </section>
 
